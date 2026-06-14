@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rainha da Mídia | Emily Susan - Consultoria IA Empresarial</title>
+  <meta name="description" content="Consultoria exclusiva que transforma qualquer negócio do caos à alta performance em 90 dias com Inteligência Artificial. Emily Susan - Especialista AIOX.">
+  <meta property="og:title" content="Rainha da Mídia | Emily Susan - Consultoria IA Empresarial">
+  <meta property="og:description" content="Do Caos a Alta Performance em 90 Dias - com IA. Metodologia AIOX exclusiva.">
+  <meta property="og:type" content="website">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#D4AF37',
+            'gold-light': '#F0CF57',
+            'gold-dark': '#A88920',
+            'dark-bg': '#0A0A14',
+            'dark-card': '#12121E',
+            'dark-border': '#1E1E30',
+          },
+          fontFamily: {
+            'display': ['Playfair Display', 'Georgia', 'serif'],
+            'body': ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+    body { background-color: #0A0A14; color: #F8F8F8; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+    .gold-gradient { background: linear-gradient(135deg, #D4AF37, #F0CF57, #D4AF37); }
+    .gold-text {
+      background: linear-gradient(135deg, #D4AF37, #F0CF57, #A88920);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(212,175,55,0.4); }
+      50% { box-shadow: 0 0 50px rgba(212,175,55,0.9); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .animate-fade-up { animation: fadeInUp 0.9s ease forwards; }
+    .animate-pulse-glow { animation: pulse-glow 2.5s ease-in-out infinite; }
+    .animate-float { animation: float 4s ease-in-out infinite; }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #D4AF37, #F0CF57);
+      color: #0A0A14;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(212,175,55,0.55); }
+
+    .btn-outline-gold {
+      border: 2px solid #D4AF37;
+      color: #D4AF37;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .btn-outline-gold:hover { background: rgba(212,175,55,0.1); transform: translateY(-2px); }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* Cards */
+    .card-dark {
+      background: #12121E;
+      border: 1px solid #1E1E30;
+      transition: all 0.3s ease;
+    }
+    .card-dark:hover { border-color: rgba(212,175,55,0.35); transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+
+    /* Hero background */
+    .hero-bg {
+      background:
+        radial-gradient(ellipse at 75% 50%, rgba(124,58,237,0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 20% 20%, rgba(212,175,55,0.07) 0%, transparent 50%),
+        #0A0A14;
+    }
+
+    /* Circuit grid overlay */
+    .circuit-bg {
+      background-image:
+        linear-gradient(rgba(212,175,55,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212,175,55,0.025) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .gold-divider { height: 2px; background: linear-gradient(90deg, transparent, #D4AF37, transparent); }
+
+    /* Accordion */
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.45s ease; }
+    .accordion-content.open { max-height: 400px; }
+
+    /* Mobile menu */
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+
+    /* WhatsApp float */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      z-index: 9999;
+      animation: pulse-glow 2.5s ease-in-out infinite;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50px;
+      padding: 0.75rem 1.25rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      transition: all 0.3s ease;
+    }
+    .whatsapp-float:hover { transform: scale(1.07); box-shadow: 0 10px 30px rgba(37,211,102,0.5); }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #0A0A14; }
+    ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 3px; }
+
+    /* Photo placeholder ring */
+    .photo-ring {
+      background: conic-gradient(#D4AF37, #F0CF57, #7C3AED, #D4AF37);
+      padding: 3px;
+      border-radius: 9999px;
+    }
+    .photo-inner {
+      background: #0A0A14;
+      border-radius: 9999px;
+      padding: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======================== -->
+  <!-- WHATSAPP FLOAT BUTTON    -->
+  <!-- ======================== -->
+  <a href="https://wa.me/5551981337913?text=Ol%C3%A1%20Emily!%20Quero%20saber%20mais%20sobre%20a%20Consultoria%20Radar%20Empresarial%20360%C2%B0"
+     target="_blank" rel="noopener noreferrer"
+     class="whatsapp-float">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="hidden md:inline">Fale Comigo</span>
+  </a>
+
+  <!-- ======================== -->
+  <!-- HEADER FIXO              -->
+  <!-- ======================== -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    style="background: rgba(10,10,20,0.85); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(212,175,55,0.12);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+
+        <!-- Logo -->
+        <a href="#inicio" class="flex items-center group">
+          <img src="logo.png" alt="Rainha da Mídia - Emily Susan"
+               class="h-12 md:h-14 w-auto object-contain"
+               style="filter: drop-shadow(0 0 8px rgba(212,175,55,0.3));">
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-7">
+          <a href="#inicio" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm font-medium">Início</a>
+          <a href="#consultoria" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm font-medium">Consultoria</a>
+          <a href="#sobre" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm font-medium">Sobre</a>
+          <a href="#resultados" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm font-medium">Resultados</a>
+          <a href="#depoimentos" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm font-medium">Depoimentos</a>
+          <a href="#contato" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm font-medium">Contato</a>
+        </nav>
+
+        <!-- CTA Desktop -->
+        <a href="https://wa.me/5551981337913?text=Ol%C3%A1%20Emily!%20Quero%20agendar%20minha%20sess%C3%A3o%20estrat%C3%A9gica"
+           target="_blank" rel="noopener noreferrer"
+           class="hidden md:flex btn-gold px-6 py-2.5 rounded-full text-sm gap-2 animate-pulse-glow">
+          Agendar Sessão &rarr;
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button id="menu-btn" class="md:hidden text-white p-2" onclick="toggleMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" style="background:#12121E; border-top: 1px solid #1E1E30;" class="px-4 py-4">
+      <nav class="flex flex-col gap-1">
+        <a href="#inicio" onclick="toggleMenu()" class="text-gray-300 hover:text-[#D4AF37] transition-colors py-3 px-2 border-b border-[#1E1E30]">Início</a>
+        <a href="#consultoria" onclick="toggleMenu()" class="text-gray-300 hover:text-[#D4AF37] transition-colors py-3 px-2 border-b border-[#1E1E30]">Consultoria</a>
+        <a href="#sobre" onclick="toggleMenu()" class="text-gray-300 hover:text-[#D4AF37] transition-colors py-3 px-2 border-b border-[#1E1E30]">Sobre</a>
+        <a href="#resultados" onclick="toggleMenu()" class="text-gray-300 hover:text-[#D4AF37] transition-colors py-3 px-2 border-b border-[#1E1E30]">Resultados</a>
+        <a href="#depoimentos" onclick="toggleMenu()" class="text-gray-300 hover:text-[#D4AF37] transition-colors py-3 px-2 border-b border-[#1E1E30]">Depoimentos</a>
+        <a href="#contato" onclick="toggleMenu()" class="text-gray-300 hover:text-[#D4AF37] transition-colors py-3 px-2 border-b border-[#1E1E30]">Contato</a>
+        <a href="https://wa.me/5551981337913" target="_blank"
+           class="btn-gold mt-3 px-6 py-3 rounded-full text-center justify-center font-bold">
+          Agendar Sessão &rarr;
+        </a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ======================== -->
+  <!-- 1. HERO                  -->
+  <!-- ======================== -->
+  <section id="inicio" class="hero-bg circuit-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
+    <div class="absolute top-24 right-8 w-80 h-80 rounded-full opacity-5 blur-3xl" style="background:#7C3AED;"></div>
+    <div class="absolute bottom-16 left-8 w-56 h-56 rounded-full opacity-5 blur-3xl" style="background:#D4AF37;"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+        <!-- Left -->
+        <div class="animate-fade-up">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6"
+               style="background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.3); color: #D4AF37;">
+            &#128081; Especialista AIOX &bull; Metodologia Exclusiva
+          </div>
+
+          <h1 class="font-display font-black leading-tight mb-6 text-4xl md:text-5xl xl:text-6xl">
+            Transformo Sua Maior<br>
+            <span class="gold-text">Dor Empresarial</span><br>
+            em <span class="gold-text">Máquina de</span><br>
+            <span style="color:#A78BFA;">Lucro Sustentável</span>
+          </h1>
+
+          <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-8">
+            Você não contrata um serviço. Ganha uma
+            <strong class="text-white">parceira tech com 29 anos de experiência</strong>
+            que assume sua dor como dela e cria soluções exclusivas para o seu negócio crescer
+            de forma <strong class="text-white">sólida e exponencial</strong>.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 mb-10">
+            <a href="https://wa.me/5551981337913?text=Ol%C3%A1%20Emily!%20Quero%20transformar%20minha%20dor%20em%20lucro!"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-gold px-8 py-4 rounded-full text-base font-bold justify-center animate-pulse-glow">
+              TRANSFORMAR MINHA DOR EM LUCRO &rarr;
+            </a>
+            <a href="#sobre"
+               class="btn-outline-gold px-8 py-4 rounded-full text-base font-bold justify-center">
+              QUERO UMA PARCEIRA ESTRATÉGICA &darr;
+            </a>
+          </div>
+
+          <!-- Badges -->
+          <div class="flex flex-wrap gap-3">
+            <div class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm"
+                 style="background:#12121E; border:1px solid #1E1E30;">
+              <span style="color:#D4AF37;">&#127942;</span>
+              <span class="text-gray-300">Vice-Campeã Nacional<br><strong class="text-white">Desafio AIOX 2026</strong></span>
+            </div>
+            <div class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm"
+                 style="background:#12121E; border:1px solid #1E1E30;">
+              <span style="color:#D4AF37;">&#11088;</span>
+              <span class="text-gray-300">29 anos de<br><strong class="text-white">experiência</strong></span>
+            </div>
+            <div class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm"
+                 style="background:#12121E; border:1px solid #1E1E30;">
+              <span style="color:#A78BFA;">&#128156;</span>
+              <span class="text-gray-300">Case de Sucesso<br><strong class="text-white">Thiago Finch &amp; Allan Nicolas</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right — Photo -->
+        <div class="flex justify-center lg:justify-end">
+          <div class="animate-float relative">
+            <div class="photo-ring w-64 h-64 md:w-80 md:h-80">
+              <div class="photo-inner w-full h-full overflow-hidden">
+                <img src="emily.jpg" alt="Emily Susan - Rainha da Midia"
+                     class="w-full h-full object-cover rounded-full"
+                     style="object-position: center top;">
+              </div>
+            </div>
+            <!-- Rings decorativos -->
+            <div class="absolute -top-6 -right-6 w-24 h-24 rounded-full opacity-20 animate-pulse"
+                 style="border: 2px solid #D4AF37;"></div>
+            <div class="absolute -bottom-8 -left-8 w-32 h-32 rounded-full opacity-10 animate-pulse"
+                 style="border: 2px solid #7C3AED; animation-delay:1.2s;"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================== -->
+  <!-- 2. AUTORIDADE / SOBRE    -->
+  <!-- ======================== -->
+  <section id="sobre" class="py-20 md:py-32" style="background:#0D0D1A;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 reveal">
+        <span class="text-sm font-semibold tracking-widest uppercase" style="color:#D4AF37;">Minha Trajetória</span>
+        <h2 class="font-display font-bold mt-3 text-3xl md:text-5xl">
+          29 ANOS DE EXPERIÊNCIA QUE<br>A IA <span class="gold-text">NÃO PODE REPLICAR</span>
+        </h2>
+        <div class="gold-divider max-w-xs mx-auto mt-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+
+        <!-- Foto + Citacao (2 cols) -->
+        <div class="lg:col-span-2 text-center reveal">
+          <div class="w-48 h-48 md:w-60 md:h-60 rounded-full mx-auto mb-8 overflow-hidden"
+               style="border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 0 40px rgba(212,175,55,0.2);">
+            <img src="emily.jpg" alt="Emily Susan - Rainha da Midia"
+                 class="w-full h-full object-cover"
+                 style="object-position: center top;">
+          </div>
+
+          <blockquote class="rounded-2xl p-6 text-left relative"
+                      style="background:#12121E; border: 1px solid rgba(212,175,55,0.2);">
+            <div class="absolute top-4 left-5 font-serif text-5xl" style="color:rgba(212,175,55,0.15);">&ldquo;</div>
+            <p class="text-gray-300 italic leading-relaxed mt-6 text-sm">
+              Meu diferencial não é a IA &mdash; é o olhar humano que transforma dor em legado, com 29 anos de experiência e soluções que nascem do coração.
+            </p>
+            <footer class="mt-4 flex items-center gap-2">
+              <div class="w-8 h-px" style="background:#D4AF37;"></div>
+              <cite class="font-semibold not-italic" style="color:#D4AF37;">Emily Susan</cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <!-- Bio (3 cols) -->
+        <div class="lg:col-span-3 reveal reveal-delay-1">
+          <h3 class="font-display text-2xl md:text-3xl font-bold mb-1">SOU <span class="gold-text">EMILY SUSAN</span></h3>
+          <p class="font-medium mb-5 text-sm" style="color:#D4AF37;">
+            Consultora e Gestora de Tecnologia IA Empresarial<br>
+            Especialista na implementação da Metodologia AIOX
+          </p>
+
+          <p class="text-gray-300 leading-relaxed mb-8">
+            O mercado me batizou como <strong style="color:#D4AF37;">RAINHA DA MÍDIA</strong> pela minha capacidade única de criar,
+            automatizar e escalar negócios usando Inteligência Artificial de forma estratégica.
+            Mas meu verdadeiro diferencial não está na tecnologia &mdash; está na <strong class="text-white">visão empática e humana</strong> que trago
+            para cada projeto. Eu entendo a dor de quem construiu um negócio do zero. Sei o peso da responsabilidade.
+            E por isso cada solução que crio nasce do <span class="gold-text">coração</span>.
+          </p>
+
+          <div class="mb-8">
+            <h4 class="text-sm font-bold tracking-widest uppercase mb-4 flex items-center gap-2" style="color:#D4AF37;">
+              <span class="inline-block w-8 h-px" style="background:#D4AF37;"></span> ANTES DE SER CONSULTORA DE IA, EU:
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="flex items-start gap-3 text-sm text-gray-300"><span style="color:#D4AF37;">&#10003;</span> Passei 29 anos gerenciando negócios reais</div>
+              <div class="flex items-start gap-3 text-sm text-gray-300"><span style="color:#D4AF37;">&#10003;</span> Vivi 19 anos no mercado corporativo de tecnologia</div>
+              <div class="flex items-start gap-3 text-sm text-gray-300"><span style="color:#D4AF37;">&#10003;</span> Empreendi por 10 anos no digital</div>
+              <div class="flex items-start gap-3 text-sm text-gray-300"><span style="color:#D4AF37;">&#10003;</span> Especializei-me em Gestão de Tráfego Pago</div>
+              <div class="flex items-start gap-3 text-sm text-gray-300"><span style="color:#D4AF37;">&#10003;</span> Implementei a Metodologia AIOX em alto nível</div>
+              <div class="flex items-start gap-3 text-sm text-gray-300"><span style="color:#D4AF37;">&#10003;</span> Crio soluções que nascem da compreensão profunda</div>
+            </div>
+          </div>
+
+          <p class="text-gray-400 leading-relaxed mb-8 text-sm">
+            Com vasto conhecimento em gestão de tráfego pago e 29 anos de trajetória, trago uma experiência
+            humana e tecnológica de ponta que une o melhor dos dois mundos.
+          </p>
+
+          <div>
+            <h4 class="text-sm font-bold tracking-widest uppercase mb-4 flex items-center gap-2" style="color:#D4AF37;">
+              <span class="inline-block w-8 h-px" style="background:#D4AF37;"></span> CONQUISTAS
+            </h4>
+            <div class="space-y-3">
+              <div class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors"
+                   style="background:#12121E; border:1px solid #1E1E30;">
+                <span class="text-2xl">&#127942;</span>
+                <div>
+                  <div class="text-white font-semibold text-sm">Vice-Campeã Nacional &mdash; Desafio AIOX 2026</div>
+                  <div class="text-xs text-gray-500">Academia Lendária &bull; Maior ecossistema de IA do Brasil</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors"
+                   style="background:#12121E; border:1px solid #1E1E30;">
+                <span class="text-2xl">&#9989;</span>
+                <div>
+                  <div class="text-white font-semibold text-sm">Case de Sucesso &mdash; Thiago Finch &amp; Allan Nicolas</div>
+                  <div class="text-xs text-gray-500">Comunidades Outlier Hub &amp; Academia Lendária</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors"
+                   style="background:#12121E; border:1px solid #1E1E30;">
+                <span class="text-2xl">&#127963;</span>
+                <div>
+                  <div class="text-white font-semibold text-sm">Academia Lendária</div>
+                  <div class="text-xs text-gray-500">Maior ecossistema de profissionais de IA do Brasil</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors"
+                   style="background:#12121E; border:1px solid #1E1E30;">
+                <span class="text-2xl">&#127758;</span>
+                <div>
+                  <div class="text-white font-semibold text-sm">Outlier Hub</div>
+                  <div class="text-xs text-gray-500">Maior Ecossistema de Marketing Digital do Brasil</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================== -->
+  <!-- 3. PROBLEMA / DORES      -->
+  <!-- ======================== -->
+  <section class="py-20 md:py-32" style="background:#0A0A14;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 reveal">
+        <span class="text-sm font-semibold tracking-widest uppercase" style="color:#F87171;">Identificação</span>
+        <h2 class="font-display font-bold mt-3 text-3xl md:text-5xl">
+          VOCÊ SE IDENTIFICA<br>COM <span style="color:#F87171;">ISSO?</span>
+        </h2>
+        <div class="h-px max-w-xs mx-auto mt-6"
+             style="background: linear-gradient(90deg, transparent, #F87171, transparent);"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+        <div class="card-dark rounded-2xl p-7 reveal">
+          <div class="text-4xl mb-4">&#10060;</div>
+          <h3 class="text-xl font-bold text-white mb-3">EQUIPE SEM DIREÇÃO</h3>
+          <p class="text-gray-400 leading-relaxed text-sm">Processos sem clareza, talentos desperdiçados, comunicação caótica e ninguém alinhado com os objetivos do negócio.</p>
+        </div>
+
+        <div class="card-dark rounded-2xl p-7 reveal reveal-delay-1">
+          <div class="text-4xl mb-4">&#10060;</div>
+          <h3 class="text-xl font-bold text-white mb-3">FATURAMENTO ESTAGNADO</h3>
+          <p class="text-gray-400 leading-relaxed text-sm">Trabalha mais, ganha igual. Não consegue crescer, não sabe por onde escalar e o resultado não reflete o esforço.</p>
+        </div>
+
+        <div class="card-dark rounded-2xl p-7 reveal reveal-delay-2">
+          <div class="text-4xl mb-4">&#10060;</div>
+          <h3 class="text-xl font-bold text-white mb-3">APAGANDO INCÊNDIO</h3>
+          <p class="text-gray-400 leading-relaxed text-sm">Todo dia um problema novo. O operacional te consome e não sobra tempo nem energia para pensar em estratégia.</p>
+        </div>
+
+        <div class="card-dark rounded-2xl p-7 reveal">
+          <div class="text-4xl mb-4">&#10060;</div>
+          <h3 class="text-xl font-bold text-white mb-3">SOBRECARGA TOTAL</h3>
+          <p class="text-gray-400 leading-relaxed text-sm">14h por dia trabalhando, fim de semana no trabalho, esgotado e sem resultado proporcional ao esforço investido.</p>
+        </div>
+
+        <div class="card-dark rounded-2xl p-7 reveal reveal-delay-1 md:col-span-2 lg:col-span-1">
+          <div class="text-4xl mb-4">&#10060;</div>
+          <h3 class="text-xl font-bold text-white mb-3">NÃO SABE POR ONDE COMEÇAR COM IA</h3>
+          <p class="text-gray-400 leading-relaxed text-sm">Ouve falar de IA em todo lugar mas parece complexo demais. Medo de errar, de perder dinheiro e não saber como aplicar.</p>
+        </div>
+
+      </div>
+
+      <div class="text-center reveal">
+        <p class="text-xl text-gray-300 mb-6">Se você se viu em algum desses cenários,<br>
+          <strong class="text-white">EU POSSO TE AJUDAR.</strong>
+        </p>
+        <a href="https://wa.me/5551981337913?text=Ol%C3%A1%20Emily!%20Quero%20transformar%20minha%20dor%20em%20resultado!"
+           target="_blank" rel="noopener noreferrer"
+           class="btn-gold px-10 py-4 rounded-full text-lg font-bold">
+          QUERO TRANSFORMAR MINHA DOR &rarr;
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== -->
+  <!-- 4. SOLUCAO RADAR 360     -->
+  <!-- ======================== -->
+  <section id="consultoria" class="py-20 md:py-32" style="background:#0D0D1A;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 reveal">
+        <span class="text-sm font-semibold tracking-widest uppercase" style="color:#D4AF37;">A Solução</span>
+        <h2 class="font-display font-bold mt-3 text-3xl md:text-5xl">
+          <span class="gold-text">RADAR EMPRESARIAL 360&deg;</span>
+        </h2>
+        <p class="text-purple-400 text-lg mt-3 font-medium">A Consultoria que Transforma Qualquer Negócio</p>
+        <div class="gold-divider max-w-xs mx-auto mt-6"></div>
+        <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+          Metodologia exclusiva em 3 pilares que trabalham juntos para levar seu negócio
+          do caos a alta performance em 90 dias.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+
+        <!-- Pilar 1 -->
+        <div class="card-dark rounded-3xl overflow-hidden reveal">
+          <div class="px-6 py-5 border-b border-[#1E1E30]"
+               style="background: linear-gradient(90deg, rgba(212,175,55,0.12), transparent);">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
+                   style="background:rgba(212,175,55,0.15);">&#128269;</div>
+              <div>
+                <div class="text-xs font-bold tracking-widest" style="color:#D4AF37;">PILAR 1 &bull; DIAS 1&ndash;30</div>
+                <div class="text-white font-bold text-xl">PESSOAS</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h4 class="text-white font-bold mb-4 text-sm">MAPEAMENTO COMPORTAMENTAL COMPLETO</h4>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-start gap-2 text-gray-300 text-sm"><span style="color:#D4AF37;">&rarr;</span> Identifico talentos ocultos da equipe</li>
+              <li class="flex items-start gap-2 text-gray-300 text-sm"><span style="color:#D4AF37;">&rarr;</span> Posiciono pessoas certas nos lugares certos</li>
+              <li class="flex items-start gap-2 text-gray-300 text-sm"><span style="color:#D4AF37;">&rarr;</span> Trago CLAREZA total para o lider</li>
+              <li class="flex items-start gap-2 text-gray-300 text-sm"><span style="color:#D4AF37;">&rarr;</span> Aumento do engajamento da equipe</li>
+            </ul>
+            <div class="px-4 py-3 rounded-xl" style="background:rgba(212,175,55,0.07); border:1px solid rgba(212,175,55,0.2);">
+              <div class="text-xs font-bold mb-1" style="color:#D4AF37;">&#10024; RESULTADO</div>
+              <div class="text-white text-sm">Time alinhado e produtivo</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pilar 2 -->
+        <div class="card-dark rounded-3xl overflow-hidden reveal reveal-delay-1">
+          <div class="px-6 py-5 border-b border-[#1E1E30]"
+               style="background: linear-gradient(90deg, rgba(124,58,237,0.15), transparent);">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
+                   style="background:rgba(124,58,237,0.15);">&#9881;&#65039;</div>
+              <div>
+                <div class="text-xs font-bold tracking-widest" style="color:#A78BFA;">PILAR 2 &bull; DIAS 31&ndash;60</div>
+                <div class="text-white font-bold text-xl">PROCESSOS</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h4 class="text-white font-bold mb-4 text-sm">DIAGNÓSTICO 360&deg; + PLANO DE AÇÃO</h4>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-start gap-2 text-gray-300 text-sm"><span style="color:#A78BFA;">&rarr;</span> Mapeio TODOS os gargalos do negócio</li>
+              <li class="flex items-start gap-2 text-gray-300 text-sm"><span style="color:#A78BFA;">&rarr;</span> Apago incendios urgentes</li>
+              <li class="flex items-start gap-2 text-gray-300 text-sm"><span style="color:#A78BFA;">&rarr;</span> Estruturo processos escaláveis</li>
+              <li class="flex items-start gap-2 text-gray-300 text-sm"><span style="color:#A78BFA;">&rarr;</span> Crio SOPs (procedimentos padrão)</li>
+            </ul>
+            <div class="px-4 py-3 rounded-xl" style="background:rgba(124,58,237,0.07); border:1px solid rgba(124,58,237,0.2);">
+              <div class="text-xs font-bold mb-1" style="color:#A78BFA;">&#10024; RESULTADO</div>
+              <div class="text-white text-sm">Operação fluida e previsível</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pilar 3 -->
+        <div class="card-dark rounded-3xl overflow-hidden reveal reveal-delay-2">
+          <div class="px-6 py-5 border-b border-[#1E1E30]"
+               style="background: linear-gradient(90deg, rgba(59,130,246,0.12), transparent);">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
+                   style="background:rgba(59,130,246,0.15);">&#129302;</div>
+              <div>
+                <div class="text-xs font-bold tracking-widest" style="color:#60A5FA;">PILAR 3 &bull; DIAS 61&ndash;90</div>
+                <div class="text-white font-bold text-xl">INTELIGÊNCIA ARTIFICIAL</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h4 class="text-white font-bold mb-4 text-sm">SOLUÇÃO EXCLUSIVA DE AUTOMAÇÃO</h4>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-start gap-2 text-gray-300 text-sm"><span style="color:#60A5FA;">&rarr;</span> Desenvolvimento DO ZERO para seu negócio</li>
+              <li class="flex items-start gap-2 text-gray-300 text-sm"><span style="color:#60A5FA;">&rarr;</span> Solução personalizada para SUA DOR</li>
+              <li class="flex items-start gap-2 text-gray-300 text-sm"><span style="color:#60A5FA;">&rarr;</span> Integração completa com seus sistemas</li>
+              <li class="flex items-start gap-2 text-gray-300 text-sm"><span style="color:#60A5FA;">&rarr;</span> Treinamento completo da equipe</li>
+            </ul>
+            <div class="px-4 py-3 rounded-xl" style="background:rgba(59,130,246,0.07); border:1px solid rgba(59,130,246,0.2);">
+              <div class="text-xs font-bold mb-1" style="color:#60A5FA;">&#10024; RESULTADO</div>
+              <div class="text-white text-sm">Negócio automatizado e pronto para ESCALAR</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center reveal">
+        <a href="https://wa.me/5551981337913?text=Ol%C3%A1%20Emily!%20Quero%20transformar%20meu%20neg%C3%B3cio%20com%20o%20Radar%20Empresarial%20360%C2%B0"
+           target="_blank" rel="noopener noreferrer"
+           class="btn-gold px-10 py-4 rounded-full text-lg font-bold">
+          QUERO TRANSFORMAR MEU NEGÓCIO &rarr;
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== -->
+  <!-- 5. RESULTADOS            -->
+  <!-- ======================== -->
+  <section id="resultados" class="py-20 md:py-32 relative overflow-hidden circuit-bg"
+           style="background: linear-gradient(135deg, #170900 0%, #0D0D1A 50%, #0a001a 100%);">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+      <div class="text-center mb-16 reveal">
+        <span class="text-sm font-semibold tracking-widest uppercase" style="color:#D4AF37;">Comprovado</span>
+        <h2 class="font-display font-bold mt-3 text-3xl md:text-5xl">
+          O QUE MEUS CLIENTES <span class="gold-text">ALCANÇAM</span>
+        </h2>
+        <div class="gold-divider max-w-xs mx-auto mt-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+
+        <div class="text-center reveal rounded-3xl p-10 backdrop-blur-sm"
+             style="background:rgba(18,18,30,0.8); border:1px solid rgba(212,175,55,0.2);">
+          <div class="font-display font-black gold-text mb-3 text-6xl md:text-7xl">+50%</div>
+          <div class="text-white text-xl font-bold mb-3">FATURAMENTO</div>
+          <div class="text-gray-400 text-sm">Aumento real na receita do negócio em 90 dias</div>
+        </div>
+
+        <div class="text-center reveal reveal-delay-1 rounded-3xl p-10 backdrop-blur-sm"
+             style="background:rgba(18,18,30,0.8); border:1px solid rgba(212,175,55,0.2);">
+          <div class="font-display font-black gold-text mb-3 text-6xl md:text-7xl">+300%</div>
+          <div class="text-white text-xl font-bold mb-3">PRODUTIVIDADE</div>
+          <div class="text-gray-400 text-sm">Sem sobrecarregar a equipe do negócio</div>
+        </div>
+
+        <div class="text-center reveal reveal-delay-2 rounded-3xl p-10 backdrop-blur-sm"
+             style="background:rgba(18,18,30,0.8); border:1px solid rgba(212,175,55,0.2);">
+          <div class="font-display font-black gold-text mb-3 text-6xl md:text-7xl">-40%</div>
+          <div class="text-white text-xl font-bold mb-3">CUSTOS</div>
+          <div class="text-gray-400 text-sm">Redução nos custos operacionais da empresa</div>
+        </div>
+
+      </div>
+
+      <div class="text-center reveal">
+        <p class="text-xl text-gray-300 mb-2">E o melhor: tudo isso em apenas</p>
+        <p class="font-display text-3xl font-bold text-white mb-8">
+          90 DIAS, com metodologia comprovada e acompanhamento completo.
+        </p>
+        <a href="https://wa.me/5551981337913?text=Ol%C3%A1%20Emily!%20Quero%20alcan%C3%A7ar%20esses%20resultados"
+           target="_blank" rel="noopener noreferrer"
+           class="btn-gold px-10 py-4 rounded-full text-lg font-bold animate-pulse-glow">
+          QUERO ESSES RESULTADOS &rarr;
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== -->
+  <!-- 6. DEPOIMENTOS           -->
+  <!-- ======================== -->
+  <section id="depoimentos" class="py-20 md:py-32 relative overflow-hidden"
+           style="background: #0A0A0A;">
+
+    <!-- Subtle tech texture overlay -->
+    <div class="absolute inset-0 pointer-events-none"
+         style="background-image: radial-gradient(rgba(212,175,55,0.03) 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+      <!-- Header -->
+      <div class="text-center mb-16 reveal">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <div class="h-px w-16 md:w-32" style="background: linear-gradient(90deg, transparent, #D4AF37);"></div>
+          <span class="text-sm font-semibold tracking-widest uppercase" style="color:#D4AF37;">Prova Social</span>
+          <div class="h-px w-16 md:w-32" style="background: linear-gradient(90deg, #D4AF37, transparent);"></div>
+        </div>
+        <h2 class="font-display font-bold text-3xl md:text-5xl text-white mb-4">
+          O QUE MEUS <span class="gold-text">CLIENTES DIZEM</span>
+        </h2>
+        <div class="gold-divider max-w-xs mx-auto mb-6"></div>
+        <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto font-display italic">
+          "Transforma&ccedil;&otilde;es reais de quem confiou na metodologia Radar Empresarial 360&deg;"
+        </p>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- CARD 1: JAMILLY PINK -->
+        <div class="reveal rounded-2xl p-8 flex flex-col group"
+             style="background:#0D0D0D; border:1px solid #1F1F1F; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 50px rgba(212,175,55,0.18)';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+
+          <!-- Badge -->
+          <div class="flex justify-center mb-6">
+            <span class="text-xs font-black tracking-widest uppercase px-4 py-1.5 rounded-full"
+                  style="background:#D4AF37; color:#0A0A0A; letter-spacing:0.12em;">
+              &#9733; Case de Sucesso
+            </span>
+          </div>
+
+          <!-- Foto circular -->
+          <div class="flex justify-center mb-5">
+            <div class="rounded-full overflow-hidden flex-shrink-0"
+                 style="width:120px; height:120px; border:4px solid #D4AF37; box-shadow:0 0 20px rgba(212,175,55,0.25);">
+              <!-- Substituir src="jamilly.jpg" quando tiver a foto -->
+              <div class="w-full h-full flex items-center justify-center text-4xl font-black"
+                   style="background: linear-gradient(135deg, #1a1a2e, #16213e); color:#D4AF37;">J</div>
+            </div>
+          </div>
+
+          <!-- Nome e cargo -->
+          <div class="text-center mb-5">
+            <h3 class="font-bold text-xl mb-1" style="font-family:'Montserrat','Inter',sans-serif; color:#D4AF37;">
+              Jamilly Pink &times; Postos 360&deg;
+            </h3>
+            <p class="text-sm" style="color:#94A3B8;">Maior autoridade em postos da Bahia</p>
+          </div>
+
+          <!-- Conquistas -->
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start gap-2 text-sm text-gray-300">
+              <span class="mt-0.5 flex-shrink-0" style="color:#10B981; font-size:16px;">&#10003;</span>
+              +600 treinamentos realizados
+            </li>
+            <li class="flex items-start gap-2 text-sm text-gray-300">
+              <span class="mt-0.5 flex-shrink-0" style="color:#10B981; font-size:16px;">&#10003;</span>
+              12 mil profissionais impactados
+            </li>
+            <li class="flex items-start gap-2 text-sm text-gray-300">
+              <span class="mt-0.5 flex-shrink-0" style="color:#10B981; font-size:16px;">&#10003;</span>
+              Transforma&ccedil;&atilde;o de atendimento em faturamento
+            </li>
+            <li class="flex items-start gap-2 text-sm text-gray-300">
+              <span class="mt-0.5 flex-shrink-0" style="color:#10B981; font-size:16px;">&#10003;</span>
+              Reconhecimento nacional no setor
+            </li>
+          </ul>
+
+          <!-- Divider -->
+          <div class="gold-divider mb-6"></div>
+
+          <!-- Depoimento -->
+          <blockquote class="flex-1 mb-6">
+            <p class="font-display italic leading-relaxed text-base" style="color:#F8FAFC; font-size:17px; line-height:1.7;">
+              &ldquo;Emily &eacute; uma das melhores profissionais que conhe&ccedil;o. Inteligente, comprometida, entrega resultado de verdade.
+              Sua capacidade de entender o mercado de postos e criar solu&ccedil;&otilde;es que realmente funcionam &eacute; impressionante.
+              N&atilde;o &eacute; apenas consultoria, &eacute; parceria estrat&eacute;gica.&rdquo;
+            </p>
+          </blockquote>
+
+          <!-- Assinatura -->
+          <div class="text-sm" style="color:#94A3B8;">
+            <p class="font-semibold text-white">&mdash; Jamilly Pink</p>
+            <p>CEO &amp; Fundadora | Postos 360&deg;</p>
+            <p style="color:#D4AF37;">@jamillypink_</p>
+          </div>
+        </div>
+
+        <!-- CARD 2: PATRÍCIA MAKIYAMA -->
+        <div class="reveal reveal-delay-1 rounded-2xl p-8 flex flex-col group"
+             style="background:#0D0D0D; border:1px solid #1F1F1F; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 50px rgba(212,175,55,0.18)';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+
+          <!-- Badge -->
+          <div class="flex justify-center mb-6">
+            <span class="text-xs font-black tracking-widest uppercase px-4 py-1.5 rounded-full"
+                  style="background:#D4AF37; color:#0A0A0A; letter-spacing:0.12em;">
+              &#9733; Case de Sucesso
+            </span>
+          </div>
+
+          <!-- Foto circular -->
+          <div class="flex justify-center mb-5">
+            <div class="rounded-full overflow-hidden flex-shrink-0"
+                 style="width:120px; height:120px; border:4px solid #D4AF37; box-shadow:0 0 20px rgba(212,175,55,0.25);">
+              <!-- Substituir src="patricia.jpg" quando tiver a foto -->
+              <div class="w-full h-full flex items-center justify-center text-4xl font-black"
+                   style="background: linear-gradient(135deg, #1a1a2e, #16213e); color:#D4AF37;">P</div>
+            </div>
+          </div>
+
+          <!-- Nome e cargo -->
+          <div class="text-center mb-5">
+            <h3 class="font-bold text-xl mb-1" style="font-family:'Montserrat','Inter',sans-serif; color:#D4AF37;">
+              Patr&iacute;cia Makiyama &times; Bella ON
+            </h3>
+            <p class="text-sm" style="color:#94A3B8;">Maior autoridade nacional em Beleza Integrativa</p>
+          </div>
+
+          <!-- Conquistas -->
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start gap-2 text-sm text-gray-300">
+              <span class="mt-0.5 flex-shrink-0" style="color:#10B981; font-size:16px;">&#10003;</span>
+              Pioneirismo em subnicho de mercado
+            </li>
+            <li class="flex items-start gap-2 text-sm text-gray-300">
+              <span class="mt-0.5 flex-shrink-0" style="color:#10B981; font-size:16px;">&#10003;</span>
+              APP exclusivo para nail designers criado do zero
+            </li>
+            <li class="flex items-start gap-2 text-sm text-gray-300">
+              <span class="mt-0.5 flex-shrink-0" style="color:#10B981; font-size:16px;">&#10003;</span>
+              Metodologia premium digitalizada
+            </li>
+            <li class="flex items-start gap-2 text-sm text-gray-300">
+              <span class="mt-0.5 flex-shrink-0" style="color:#10B981; font-size:16px;">&#10003;</span>
+              Transforma&ccedil;&atilde;o digital em setor tradicional
+            </li>
+          </ul>
+
+          <!-- Divider -->
+          <div class="gold-divider mb-6"></div>
+
+          <!-- Depoimento -->
+          <blockquote class="flex-1 mb-6">
+            <p class="font-display italic leading-relaxed text-base" style="color:#F8FAFC; font-size:17px; line-height:1.7;">
+              &ldquo;Emily n&atilde;o apenas desenvolveu um APP, ela materializou minha miss&atilde;o de vida. O Bella ON est&aacute; revolucionando
+              a forma como profissionais de beleza trabalham e se posicionam no mercado. Sua capacidade de entender
+              minha ess&ecirc;ncia e transformar em tecnologia &eacute; &uacute;nica. N&atilde;o &eacute; apenas t&eacute;cnica, &eacute; conex&atilde;o gen&uacute;ina com prop&oacute;sito.&rdquo;
+            </p>
+          </blockquote>
+
+          <!-- Assinatura -->
+          <div class="text-sm" style="color:#94A3B8;">
+            <p class="font-semibold text-white">&mdash; Patr&iacute;cia Makiyama</p>
+            <p>Mentora Pioneira | Beleza Integrativa</p>
+            <p style="color:#D4AF37;">@patriciabelezaintegrativa</p>
+          </div>
+        </div>
+
+        <!-- CARD 3: LUIS FELIPE -->
+        <div class="reveal reveal-delay-2 rounded-2xl p-8 flex flex-col group md:col-span-2 lg:col-span-1"
+             style="background:#0D0D0D; border:1px solid #1F1F1F; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 50px rgba(212,175,55,0.18)';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+
+          <!-- Badge -->
+          <div class="flex justify-center mb-6">
+            <span class="text-xs font-black tracking-widest uppercase px-4 py-1.5 rounded-full"
+                  style="background:#D4AF37; color:#0A0A0A; letter-spacing:0.12em;">
+              &#9733; Case de Sucesso
+            </span>
+          </div>
+
+          <!-- Foto circular -->
+          <div class="flex justify-center mb-5">
+            <div class="rounded-full overflow-hidden flex-shrink-0"
+                 style="width:120px; height:120px; border:4px solid #D4AF37; box-shadow:0 0 20px rgba(212,175,55,0.25);">
+              <!-- Substituir src="luis.jpg" quando tiver a foto -->
+              <div class="w-full h-full flex items-center justify-center text-4xl font-black"
+                   style="background: linear-gradient(135deg, #1a1a2e, #16213e); color:#D4AF37;">L</div>
+            </div>
+          </div>
+
+          <!-- Nome e cargo -->
+          <div class="text-center mb-5">
+            <h3 class="font-bold text-xl mb-1" style="font-family:'Montserrat','Inter',sans-serif; color:#D4AF37;">
+              Luis Felipe &times; Iluminnare
+            </h3>
+            <p class="text-sm" style="color:#94A3B8;">Desenvolvimento Humano &amp; Performance Empresarial</p>
+          </div>
+
+          <!-- Conquistas -->
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start gap-2 text-sm text-gray-300">
+              <span class="mt-0.5 flex-shrink-0" style="color:#10B981; font-size:16px;">&#10003;</span>
+              Estrat&eacute;gia e mentalidade para empreendedores
+            </li>
+            <li class="flex items-start gap-2 text-sm text-gray-300">
+              <span class="mt-0.5 flex-shrink-0" style="color:#10B981; font-size:16px;">&#10003;</span>
+              Resultados sustent&aacute;veis e consistentes
+            </li>
+            <li class="flex items-start gap-2 text-sm text-gray-300">
+              <span class="mt-0.5 flex-shrink-0" style="color:#10B981; font-size:16px;">&#10003;</span>
+              Transforma&ccedil;&atilde;o de atendimentos em experi&ecirc;ncias
+            </li>
+            <li class="flex items-start gap-2 text-sm text-gray-300">
+              <span class="mt-0.5 flex-shrink-0" style="color:#10B981; font-size:16px;">&#10003;</span>
+              Clareza e foco para crescimento exponencial
+            </li>
+          </ul>
+
+          <!-- Divider -->
+          <div class="gold-divider mb-6"></div>
+
+          <!-- Depoimento -->
+          <blockquote class="flex-1 mb-6">
+            <p class="font-display italic leading-relaxed text-base" style="color:#F8FAFC; font-size:17px; line-height:1.7;">
+              &ldquo;Emily tem um dom raro: ela entende n&atilde;o s&oacute; de tecnologia, mas de PESSOAS. Ela me ajudou a materializar
+              minha vis&atilde;o de desenvolvimento humano de forma escal&aacute;vel. Sua consultoria vai al&eacute;m do t&eacute;cnico &mdash; ela
+              toca a ess&ecirc;ncia do prop&oacute;sito e transforma em realidade. Recomendo de olhos fechados.&rdquo;
+            </p>
+          </blockquote>
+
+          <!-- Assinatura -->
+          <div class="text-sm" style="color:#94A3B8;">
+            <p class="font-semibold text-white">&mdash; Luis Felipe</p>
+            <p>Fundador | Iluminnare</p>
+            <p>Especialista em Desenvolvimento Humano</p>
+            <p style="color:#D4AF37;">@iluminnare_oficial</p>
+          </div>
+        </div>
+
+      </div><!-- /grid -->
+
+    </div>
+  </section>
+
+
+  <!-- ======================== -->
+  <!-- 6. MEU DIFERENCIAL       -->
+  <!-- ======================== -->
+  <section class="py-20 md:py-32" style="background:#0A0A14;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 reveal">
+        <span class="text-sm font-semibold tracking-widest uppercase" style="color:#D4AF37;">Por que Emily</span>
+        <h2 class="font-display font-bold mt-3 text-3xl md:text-5xl">
+          POR QUE SOU <span class="gold-text">DIFERENTE</span> DE QUALQUER<br>
+          CONSULTORIA DE IA QUE VOCÊ JÁ VIU
+        </h2>
+        <div class="gold-divider max-w-xs mx-auto mt-6"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <blockquote class="rounded-3xl p-10 md:p-16 relative mb-16 reveal"
+                    style="background:#12121E; border:1px solid rgba(212,175,55,0.2);">
+          <div class="absolute top-6 left-8 font-serif text-8xl" style="color:rgba(212,175,55,0.08);">&ldquo;</div>
+          <p class="font-display text-xl md:text-2xl text-white italic leading-relaxed relative">
+            Meu diferencial não é a tecnologia &mdash; é o <span class="gold-text">olhar humano</span> que trago para ela.
+          </p>
+          <footer class="mt-8 flex items-center gap-3">
+            <div class="w-12 h-px" style="background:#D4AF37;"></div>
+            <cite class="font-bold text-lg not-italic" style="color:#D4AF37;">Emily Susan &bull; Rainha da Mídia</cite>
+            <div class="w-12 h-px" style="background:#D4AF37;"></div>
+          </footer>
+        </blockquote>
+
+        <div class="space-y-6 text-gray-300 text-lg leading-relaxed reveal">
+          <p>
+            Com <strong class="text-white">29 anos de experiência</strong> em gestão de tráfego pago e negócios digitais,
+            eu não vendo IA genérica. Eu crio soluções exclusivas que nascem da compreensão profunda da sua dor empresarial.
+          </p>
+          <p>
+            Quando você me contrata, seu problema se torna meu. Eu assumo a responsabilidade de encontrar a melhor solução
+            para o seu negócio &mdash; com <strong class="text-white">empatia absoluta</strong> pelo legado que você construiu.
+          </p>
+          <p>
+            Todos os meus projetos nascem do <span class="gold-text">coração</span> e de uma vasta experiência de mercado.
+            Isso a IA sozinha não pode entregar.
+          </p>
+          <p>
+            Minha missão é transformar sua maior dor em uma <strong class="text-white">máquina de lucro sustentável</strong>
+            e crescimento exponencial &mdash; construindo um legado sólido que vai muito além da tecnologia.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== -->
+  <!-- 7. O QUE EU ENTREGO      -->
+  <!-- ======================== -->
+  <section class="py-20 md:py-32" style="background:#0D0D1A;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 reveal">
+        <span class="text-sm font-semibold tracking-widest uppercase" style="color:#D4AF37;">Minha Entrega</span>
+        <h2 class="font-display font-bold mt-3 text-3xl md:text-5xl">
+          VOCÊ NÃO CONTRATA UM SERVIÇO.<br>
+          GANHA UMA <span class="gold-text">PARCEIRA ESTRATÉGICA</span>.
+        </h2>
+        <div class="gold-divider max-w-xs mx-auto mt-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <div class="card-dark rounded-3xl p-8 reveal text-center">
+          <div class="w-16 h-16 rounded-full flex items-center justify-center text-3xl mx-auto mb-6"
+               style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.3);">
+            &#129309;
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-4">PARCERIA,<br>NÃO PRESTAÇÃO</h3>
+          <p class="text-gray-400 leading-relaxed text-sm">
+            Seu problema se torna meu. Assumo responsabilidade compartilhada pelo sucesso do seu negócio
+            &mdash; com compromisso de entregar a melhor solução possível.
+          </p>
+        </div>
+
+        <div class="card-dark rounded-3xl p-8 reveal reveal-delay-1 text-center"
+             style="border-color: rgba(212,175,55,0.35);">
+          <div class="w-16 h-16 rounded-full flex items-center justify-center text-3xl mx-auto mb-6"
+               style="background:rgba(212,175,55,0.15); border:1px solid rgba(212,175,55,0.4);">
+            &#128142;
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-4">SOLUÇÕES<br>EXCLUSIVAS</h3>
+          <p class="text-gray-400 leading-relaxed text-sm">
+            Não trabalho com IA genérica. Cada projeto nasce da compreensão profunda da sua dor
+            e é desenhado especialmente para o seu negócio.
+          </p>
+        </div>
+
+        <div class="card-dark rounded-3xl p-8 reveal reveal-delay-2 text-center">
+          <div class="w-16 h-16 rounded-full flex items-center justify-center text-3xl mx-auto mb-6"
+               style="background:rgba(124,58,237,0.12); border:1px solid rgba(124,58,237,0.3);">
+            &#127807;
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-4">CRESCIMENTO<br>SUSTENTÁVEL</h3>
+          <p class="text-gray-400 leading-relaxed text-sm">
+            Transformo dor em máquina de lucro e escala exponencial &mdash; mas sempre com ética,
+            solidez e respeito pelo legado que você está construindo.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== -->
+  <!-- 7. PARA QUEM E           -->
+  <!-- ======================== -->
+  <section class="py-20 md:py-32" style="background:#0D0D1A;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 reveal">
+        <span class="text-sm font-semibold tracking-widest uppercase" style="color:#D4AF37;">Elegibilidade</span>
+        <h2 class="font-display font-bold mt-3 text-3xl md:text-5xl">
+          ESSA CONSULTORIA É <span class="gold-text">PARA VOCÊ</span> SE:
+        </h2>
+        <div class="gold-divider max-w-xs mx-auto mt-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <div class="rounded-3xl p-8 reveal" style="background:rgba(20,83,45,0.1); border:1px solid rgba(74,222,128,0.2);">
+          <div class="flex items-center gap-3 mb-7">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
+                 style="background:rgba(74,222,128,0.15);">&#9989;</div>
+            <h3 class="text-2xl font-bold" style="color:#4ADE80;">PERFIL IDEAL</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3"><span class="mt-1 text-lg" style="color:#4ADE80;">&#10003;</span><p class="text-gray-300 text-sm">É empreendedor(a) com negócio <strong class="text-white">estabelecido</strong></p></div>
+            <div class="flex items-start gap-3"><span class="mt-1 text-lg" style="color:#4ADE80;">&#10003;</span><p class="text-gray-300 text-sm">Fatura entre <strong class="text-white">R$ 30k&ndash;500k/mês</strong></p></div>
+            <div class="flex items-start gap-3"><span class="mt-1 text-lg" style="color:#4ADE80;">&#10003;</span><p class="text-gray-300 text-sm">Tem equipe (mesmo que <strong class="text-white">pequena</strong>)</p></div>
+            <div class="flex items-start gap-3"><span class="mt-1 text-lg" style="color:#4ADE80;">&#10003;</span><p class="text-gray-300 text-sm">Quer crescer mas está <strong class="text-white">travado</strong></p></div>
+            <div class="flex items-start gap-3"><span class="mt-1 text-lg" style="color:#4ADE80;">&#10003;</span><p class="text-gray-300 text-sm">Acredita em tecnologia mas <strong class="text-white">não sabe por onde começar</strong></p></div>
+            <div class="flex items-start gap-3"><span class="mt-1 text-lg" style="color:#4ADE80;">&#10003;</span><p class="text-gray-300 text-sm">Valoriza <strong class="text-white">qualidade e parceria</strong> de longo prazo</p></div>
+            <div class="flex items-start gap-3"><span class="mt-1 text-lg" style="color:#4ADE80;">&#10003;</span><p class="text-gray-300 text-sm">Está disposto a <strong class="text-white">investir em transformação real</strong></p></div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl p-8 reveal reveal-delay-1" style="background:rgba(127,29,29,0.1); border:1px solid rgba(248,113,113,0.2);">
+          <div class="flex items-center gap-3 mb-7">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
+                 style="background:rgba(248,113,113,0.15);">&#10060;</div>
+            <h3 class="text-2xl font-bold" style="color:#F87171;">NÃO É PARA VOCÊ SE:</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3"><span class="mt-1 text-lg" style="color:#F87171;">&#10007;</span><p class="text-gray-400 text-sm">Busca <strong class="text-white">solução mágica</strong> e resultado imediato</p></div>
+            <div class="flex items-start gap-3"><span class="mt-1 text-lg" style="color:#F87171;">&#10007;</span><p class="text-gray-400 text-sm">Não está disposto a <strong class="text-white">mudar processos</strong></p></div>
+            <div class="flex items-start gap-3"><span class="mt-1 text-lg" style="color:#F87171;">&#10007;</span><p class="text-gray-400 text-sm">Quer apenas uma <strong class="text-white">ferramenta barata</strong></p></div>
+            <div class="flex items-start gap-3"><span class="mt-1 text-lg" style="color:#F87171;">&#10007;</span><p class="text-gray-400 text-sm">Não valoriza <strong class="text-white">consultoria personalizada</strong></p></div>
+            <div class="flex items-start gap-3"><span class="mt-1 text-lg" style="color:#F87171;">&#10007;</span><p class="text-gray-400 text-sm">Espera resultado <strong class="text-white">sem comprometimento</strong></p></div>
+            <div class="flex items-start gap-3"><span class="mt-1 text-lg" style="color:#F87171;">&#10007;</span><p class="text-gray-400 text-sm">Está apenas <strong class="text-white">"testando"</strong> sem compromisso real</p></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================== -->
+  <!-- 8. DEPOIMENTOS           -->
+  <!-- ======================== -->
+  <section class="py-20 md:py-32" style="background:#0A0A14;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 reveal">
+        <span class="text-sm font-semibold tracking-widest uppercase" style="color:#D4AF37;">Portfólio &amp; Ecossistema</span>
+        <h2 class="font-display font-bold mt-3 text-3xl md:text-5xl">
+          PROJETOS <span class="gold-text">&amp; PARCERIAS</span>
+        </h2>
+        <div class="gold-divider max-w-xs mx-auto mt-6"></div>
+        <p class="text-gray-400 mt-5 max-w-2xl mx-auto text-sm">
+          Não espero pelo mercado &mdash; eu <strong class="text-white">crio o mercado</strong>.
+          Cada projeto nasce do absoluto zero com uma solução exclusiva de IA
+          que resolve dores reais de negócios reais.
+        </p>
+      </div>
+
+      <!-- PROJETOS EXCLUSIVOS -->
+      <div class="mb-6 reveal">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="h-px flex-1" style="background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4));"></div>
+          <span class="text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full"
+                style="background:rgba(212,175,55,0.1); color:#D4AF37; border:1px solid rgba(212,175,55,0.25);">
+            &#128161; Projetos Exclusivos em Desenvolvimento
+          </span>
+          <div class="h-px flex-1" style="background: linear-gradient(90deg, rgba(212,175,55,0.4), transparent);"></div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+
+        <!-- Projeto 1: Posto AIOX 360 -->
+        <div class="card-dark rounded-3xl overflow-hidden reveal group">
+          <div class="px-6 pt-6 pb-4 border-b border-[#1E1E30]"
+               style="background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(18,18,30,0.9));">
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0"
+                   style="background:rgba(212,175,55,0.15); border:1px solid rgba(212,175,55,0.3);">
+                &#9981;
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full mt-1 flex-shrink-0"
+                    style="background:rgba(212,175,55,0.12); color:#D4AF37; border:1px solid rgba(212,175,55,0.2);">
+                Em Desenvolvimento
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-1">Posto AIOX 360&deg; Novatore</h3>
+            <p class="text-xs font-semibold" style="color:#D4AF37;">
+              Automação &amp; IA para Postos de Combustível &bull; Bahia
+            </p>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+              Plataforma SaaS completa com IA, automação e gamificação desenvolvida do zero
+              para modernizar a operação de postos de combustível &mdash; setor em que
+              <strong class="text-white">95% dos negócios ainda não são digitalizados</strong>.
+            </p>
+            <div class="space-y-2 mb-5">
+              <div class="flex items-start gap-2 text-sm text-gray-400">
+                <span style="color:#D4AF37;">&#128200;</span> ROI projetado: 3&ndash;6 meses vs. 12&ndash;24 dos ERPs tradicionais
+              </div>
+              <div class="flex items-start gap-2 text-sm text-gray-400">
+                <span style="color:#D4AF37;">&#129309;</span> Parceiro: maior autoridade em postos de combustível da Bahia
+              </div>
+              <div class="flex items-start gap-2 text-sm text-gray-400">
+                <span style="color:#D4AF37;">&#127775;</span> Diagnóstico, automação operacional e fidelização integrados
+              </div>
+            </div>
+            <a href="https://rainhadamidia.github.io/postosaiox-360-novatore-2026/" target="_blank" rel="noopener noreferrer"
+               class="btn-outline-gold px-5 py-2.5 rounded-full text-sm font-bold inline-flex gap-2 group-hover:bg-yellow-400/10 transition-all">
+              Ver Projeto &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Projeto 2: ILUMINNARE -->
+        <div class="card-dark rounded-3xl overflow-hidden reveal reveal-delay-1 group">
+          <div class="px-6 pt-6 pb-4 border-b border-[#1E1E30]"
+               style="background: linear-gradient(135deg, rgba(124,58,237,0.12), rgba(18,18,30,0.9));">
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0"
+                   style="background:rgba(124,58,237,0.15); border:1px solid rgba(124,58,237,0.3);">
+                &#10024;
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full mt-1 flex-shrink-0"
+                    style="background:rgba(124,58,237,0.15); color:#A78BFA; border:1px solid rgba(124,58,237,0.3);">
+                Protótipo Ativo
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-1">ILUMINNARE</h3>
+            <p class="text-xs font-semibold" style="color:#A78BFA;">
+              Saúde Emocional Empresarial com IA &bull; Autoconhecimento
+            </p>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+              Plataforma de saúde emocional que combina <strong class="text-white">diagnóstico por IA facial</strong>,
+              gamificação estilo Duolingo e mentoria personalizada para transformar
+              autoconhecimento em hábito contínuo nas empresas.
+            </p>
+            <div class="space-y-2 mb-5">
+              <div class="flex items-start gap-2 text-sm text-gray-400">
+                <span style="color:#A78BFA;">&#127775;</span> Parceiro: Luís Felipe &mdash; CEO Iluminnare
+              </div>
+              <div class="flex items-start gap-2 text-sm text-gray-400">
+                <span style="color:#A78BFA;">&#127758;</span> Maior ecossistema de autoconhecimento empresarial do mundo
+              </div>
+              <div class="flex items-start gap-2 text-sm text-gray-400">
+                <span style="color:#A78BFA;">&#128200;</span> Modelo Freemium + assinatura &bull; B2C e B2B
+              </div>
+            </div>
+            <a href="https://rainhadamidia.github.io/projeto-iluminnare-aiox/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold transition-all"
+               style="border:2px solid rgba(124,58,237,0.5); color:#A78BFA;"
+               onmouseover="this.style.background='rgba(124,58,237,0.1)'" onmouseout="this.style.background='transparent'">
+              Ver Projeto &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PARCEIROS ESTRATÉGICOS -->
+      <div class="mb-6 reveal">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="h-px flex-1" style="background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4));"></div>
+          <span class="text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full"
+                style="background:rgba(212,175,55,0.1); color:#D4AF37; border:1px solid rgba(212,175,55,0.25);">
+            &#129309; Parceiros Estratégicos
+          </span>
+          <div class="h-px flex-1" style="background: linear-gradient(90deg, rgba(212,175,55,0.4), transparent);"></div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+        <!-- WA Multi Sender -->
+        <div class="rounded-2xl p-7 reveal flex gap-5 items-start"
+             style="background: linear-gradient(135deg, rgba(37,211,102,0.06), rgba(18,18,30,1)); border:1px solid rgba(37,211,102,0.2);">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
+               style="background:rgba(37,211,102,0.12); border:1px solid rgba(37,211,102,0.25);">&#128242;</div>
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <h4 class="text-white font-bold text-base">WA Multi Sender</h4>
+              <span class="text-xs px-2 py-0.5 rounded-full font-bold" style="background:rgba(37,211,102,0.15); color:#4ADE80;">META</span>
+            </div>
+            <p class="text-xs mb-2" style="color:#4ADE80;">João Evangelista &bull; Parceiro direto da Meta</p>
+            <p class="text-gray-400 text-xs leading-relaxed mb-4">
+              Ferramenta com API Oficial WhatsApp para ajudar micro e pequenos empreendedores
+              a vender e escalar seus negócios com IA.
+            </p>
+            <a href="https://wamultisender.com" target="_blank" rel="noopener noreferrer"
+               class="text-xs font-bold hover:text-green-300 transition-colors" style="color:#4ADE80;">
+              wamultisender.com &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Vinicius O Matos -->
+        <div class="rounded-2xl p-7 reveal reveal-delay-1 flex gap-5 items-start"
+             style="background: linear-gradient(135deg, rgba(212,175,55,0.06), rgba(18,18,30,1)); border:1px solid rgba(212,175,55,0.2);">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
+               style="background:rgba(212,175,55,0.12); border:1px solid rgba(212,175,55,0.25);">&#129302;</div>
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <h4 class="text-white font-bold text-base">Vinicius O Matos</h4>
+              <span class="text-xs px-2 py-0.5 rounded-full font-bold" style="background:rgba(212,175,55,0.15); color:#D4AF37;">IA &amp; Tech</span>
+            </div>
+            <p class="text-xs mb-2" style="color:#D4AF37;">Parceiro Estratégico &bull; IA &amp; Automação</p>
+            <p class="text-gray-400 text-xs leading-relaxed mb-4">
+              Especialista em soluções de Inteligência Artificial e Automação.
+              Parceria que amplia o alcance e a qualidade das entregas para os clientes.
+            </p>
+            <a href="https://viniciusomatos.com" target="_blank" rel="noopener noreferrer"
+               class="text-xs font-bold hover:text-yellow-300 transition-colors" style="color:#D4AF37;">
+              viniciusomatos.com &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== -->
+  <!-- 9. FAQ                   -->
+  <!-- ======================== -->
+  <section class="py-20 md:py-32" style="background:#0D0D1A;">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 reveal">
+        <span class="text-sm font-semibold tracking-widest uppercase" style="color:#D4AF37;">Duvidas</span>
+        <h2 class="font-display font-bold mt-3 text-3xl md:text-5xl">
+          PERGUNTAS <span class="gold-text">FREQUENTES</span>
+        </h2>
+        <div class="gold-divider max-w-xs mx-auto mt-6"></div>
+      </div>
+
+      <div class="space-y-3 reveal">
+
+        <div class="card-dark rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)"
+            class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-white hover:text-[#D4AF37] transition-colors">
+            <span>&#10067; Quanto custa a consultoria?</span>
+            <span class="accordion-icon text-2xl font-light transition-transform" style="color:#D4AF37;">+</span>
+          </button>
+          <div class="accordion-content px-6 pb-5">
+            <p class="text-gray-300 leading-relaxed text-sm">
+              O investimento é personalizado conforme o porte e necessidade do seu negócio.
+              <strong class="text-white">Agende uma Sessão Estratégica GRATUITA</strong> para receber
+              uma proposta sob medida para a sua realidade.
+            </p>
+          </div>
+        </div>
+
+        <div class="card-dark rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)"
+            class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-white hover:text-[#D4AF37] transition-colors">
+            <span>&#10067; Funciona para meu segmento?</span>
+            <span class="accordion-icon text-2xl font-light transition-transform" style="color:#D4AF37;">+</span>
+          </button>
+          <div class="accordion-content px-6 pb-5">
+            <p class="text-gray-300 text-sm mb-3">Sim! A metodologia e adaptavel a qualquer nicho. Já atendi com sucesso:</p>
+            <div class="grid grid-cols-2 gap-2">
+              <span class="text-sm" style="color:#D4AF37;">&#10003; E-commerce</span>
+              <span class="text-sm" style="color:#D4AF37;">&#10003; Consultoria</span>
+              <span class="text-sm" style="color:#D4AF37;">&#10003; Saúde e bem-estar</span>
+              <span class="text-sm" style="color:#D4AF37;">&#10003; Educação</span>
+              <span class="text-sm" style="color:#D4AF37;">&#10003; Serviços em geral</span>
+              <span class="text-sm" style="color:#D4AF37;">&#10003; Infoprodutos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-dark rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)"
+            class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-white hover:text-[#D4AF37] transition-colors">
+            <span>&#10067; Preciso entender de tecnologia?</span>
+            <span class="accordion-icon text-2xl font-light transition-transform" style="color:#D4AF37;">+</span>
+          </button>
+          <div class="accordion-content px-6 pb-5">
+            <p class="text-gray-300 text-sm mb-3"><strong class="text-white">NÃO!</strong> Eu cuido de toda a parte técnica. Você só precisa:</p>
+            <ul class="space-y-1">
+              <li class="text-sm" style="color:#D4AF37;">&rarr; Ter vontade de crescer</li>
+              <li class="text-sm" style="color:#D4AF37;">&rarr; Estar aberto a mudanças</li>
+              <li class="text-sm" style="color:#D4AF37;">&rarr; Comprometer-se com o processo</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-dark rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)"
+            class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-white hover:text-[#D4AF37] transition-colors">
+            <span>&#10067; Quanto tempo até ver resultados?</span>
+            <span class="accordion-icon text-2xl font-light transition-transform" style="color:#D4AF37;">+</span>
+          </button>
+          <div class="accordion-content px-6 pb-5">
+            <ul class="space-y-2 text-sm">
+              <li class="text-gray-300"><span class="font-bold" style="color:#D4AF37;">&rarr; Primeiros resultados:</span> 30 dias</li>
+              <li class="text-gray-300"><span class="font-bold" style="color:#D4AF37;">&rarr; Transformação completa:</span> 90 dias</li>
+              <li class="text-gray-300"><span class="font-bold" style="color:#D4AF37;">&rarr; Escalabilidade sustentável:</span> 6&ndash;12 meses</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-dark rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)"
+            class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-white hover:text-[#D4AF37] transition-colors">
+            <span>&#10067; E depois dos 90 dias?</span>
+            <span class="accordion-icon text-2xl font-light transition-transform" style="color:#D4AF37;">+</span>
+          </button>
+          <div class="accordion-content px-6 pb-5">
+            <p class="text-gray-300 text-sm mb-3">Você terá tudo estruturado para continuar crescendo:</p>
+            <ul class="space-y-1">
+              <li class="text-sm" style="color:#D4AF37;">&#10003; Sistema funcionando autonomamente</li>
+              <li class="text-sm" style="color:#D4AF37;">&#10003; Equipe treinada e alinhada</li>
+              <li class="text-sm" style="color:#D4AF37;">&#10003; Processos documentados</li>
+              <li class="text-sm" style="color:#D4AF37;">&#10003; Plano de crescimento para 12 meses</li>
+              <li class="text-sm" style="color:#D4AF37;">&#10003; Suporte pós-consultoria disponível</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-dark rounded-2xl overflow-hidden">
+          <button onclick="toggleAccordion(this)"
+            class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-white hover:text-[#D4AF37] transition-colors">
+            <span>&#10067; Como funciona o acompanhamento?</span>
+            <span class="accordion-icon text-2xl font-light transition-transform" style="color:#D4AF37;">+</span>
+          </button>
+          <div class="accordion-content px-6 pb-5">
+            <ul class="space-y-1 text-sm">
+              <li class="text-gray-300 flex gap-2"><span style="color:#D4AF37;">&rarr;</span> Reuniões semanais estratégicas</li>
+              <li class="text-gray-300 flex gap-2"><span style="color:#D4AF37;">&rarr;</span> Acesso direto via WhatsApp</li>
+              <li class="text-gray-300 flex gap-2"><span style="color:#D4AF37;">&rarr;</span> Relatórios mensais de progresso</li>
+              <li class="text-gray-300 flex gap-2"><span style="color:#D4AF37;">&rarr;</span> Ajustes contínuos conforme necessário</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================== -->
+  <!-- MINHA MISSÃO             -->
+  <!-- ======================== -->
+  <section class="py-20 md:py-32 relative overflow-hidden circuit-bg"
+           style="background: linear-gradient(135deg, #0f001a 0%, #0D0D1A 50%, #170900 100%);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+      <div class="reveal">
+        <span class="text-sm font-semibold tracking-widest uppercase" style="color:#A78BFA;">Minha Missão</span>
+        <h2 class="font-display font-bold mt-3 text-3xl md:text-5xl mb-8">
+          MINHA MISSÃO É CONSTRUIR <span class="gold-text">LEGADOS</span>,<br>
+          NÃO APENAS PROJETOS
+        </h2>
+        <div class="gold-divider max-w-xs mx-auto mb-12"></div>
+
+        <div class="space-y-6 text-gray-300 text-lg leading-relaxed mb-12">
+          <p>
+            Meu propósito de vida é transformar a maior dor empresarial dos meus clientes em
+            <strong class="text-white">oportunidade de lucro e crescimento sustentável</strong>.
+          </p>
+          <p class="font-display text-xl italic" style="color:#F0CF57;">
+            Cada projeto que assumo, assumo de coração.
+          </p>
+          <p>
+            Com empatia absoluta pelo que você construiu, trago a responsabilidade e ética de fazer
+            seu legado crescer de forma exponencial &mdash; mas sempre
+            <strong class="text-white">sólida e sustentável</strong>.
+          </p>
+          <p>
+            Não busco resultados rápidos e vazios. Busco construir <strong class="text-white">máquinas de lucro
+            que se perpetuam</strong>, respeitando seus valores e fortalecendo seu posicionamento no mercado.
+          </p>
+          <p>
+            Essa é minha missão. Esse é meu diferencial. E é por isso que meus clientes não me veem como
+            prestadora de serviço &mdash; mas como <span class="gold-text">parceira estratégica</span>.
+          </p>
+        </div>
+
+        <a href="https://wa.me/5551981337913?text=Ol%C3%A1%20Emily!%20Quero%20construir%20meu%20legado%20com%20sua%20ajuda!"
+           target="_blank" rel="noopener noreferrer"
+           class="btn-gold px-10 py-4 rounded-full text-lg font-bold inline-flex items-center gap-3 animate-pulse-glow">
+          CONSTRUIR MEU LEGADO AGORA &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================== -->
+  <!-- 10. CTA FINAL            -->
+  <!-- ======================== -->
+  <section id="contato" class="py-20 md:py-32 relative overflow-hidden circuit-bg"
+           style="background: linear-gradient(135deg, #170900 0%, #0D0D1A 40%, #0f001a 100%);">
+    <div class="absolute top-0 left-0 right-0 h-1" style="background: linear-gradient(90deg, #D4AF37, #F0CF57, #D4AF37);"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+      <div class="reveal">
+        <div class="text-6xl mb-6">&#128081;</div>
+        <h2 class="font-display font-black text-4xl md:text-6xl mb-6">
+          PRONTO PARA<br>
+          <span class="gold-text">TRANSFORMAR</span><br>
+          SEU NEGÓCIO?
+        </h2>
+        <p class="text-gray-300 text-xl mb-10 max-w-2xl mx-auto">
+          Agende uma <strong class="text-white">Sessão Estratégica GRATUITA</strong> e descubra como posso
+          levar sua empresa do <strong style="color:#D4AF37;">CAOS</strong> a
+          <strong style="color:#D4AF37;">ALTA PERFORMANCE</strong> em 90 dias.
+        </p>
+
+        <a href="https://wa.me/5551981337913?text=Ol%C3%A1%20Emily!%20Quero%20agendar%20minha%20sess%C3%A3o%20estrat%C3%A9gica%20gratuita!"
+           target="_blank" rel="noopener noreferrer"
+           class="btn-gold px-10 md:px-14 py-5 rounded-full text-xl font-black gap-3 justify-center animate-pulse-glow mb-8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          AGENDAR MINHA SESSÃO AGORA &rarr;
+        </a>
+
+        <div class="flex flex-wrap justify-center gap-6 text-gray-300 text-sm mb-10">
+          <span class="flex items-center gap-2"><span style="color:#D4AF37;">&#9889;</span> Vagas limitadas por mês</span>
+          <span class="flex items-center gap-2"><span style="color:#D4AF37;">&#127873;</span> Sessão estratégica 100% gratuita</span>
+          <span class="flex items-center gap-2"><span style="color:#D4AF37;">&#128274;</span> Sem compromisso</span>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-400">
+          <a href="https://wa.me/5551981337913" target="_blank" rel="noopener noreferrer"
+             class="flex items-center gap-2 hover:text-green-400 transition-colors text-sm">
+            &#128172; +55 (51) 98133-7913
+          </a>
+          <span class="hidden sm:block text-gray-700">|</span>
+          <a href="mailto:contato@rainhadamidia.online"
+             class="flex items-center gap-2 hover:text-[#D4AF37] transition-colors text-sm">
+            &#128231; contato@rainhadamidia.online
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================== -->
+  <!-- 11. FOOTER               -->
+  <!-- ======================== -->
+  <footer style="background:#07070F; border-top:1px solid #1E1E30;" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+        <!-- Marca -->
+        <div>
+          <div class="mb-4">
+            <img src="logo.png" alt="Rainha da Mídia - Emily Susan"
+                 class="h-12 w-auto object-contain"
+                 style="filter: drop-shadow(0 0 6px rgba(212,175,55,0.25));">
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed mb-6">
+            Consultora IA Empresarial.<br>
+            Transformando negócios do caos a<br>
+            alta performance desde 2015.
+          </p>
+          <div class="pt-5 border-t border-[#1E1E30]">
+            <p class="text-gray-600 text-xs mb-2">Parceria estratégica:</p>
+            <a href="https://viniciusomatos.com" target="_blank" rel="noopener noreferrer"
+               class="font-semibold text-sm hover:text-yellow-300 transition-colors" style="color:#D4AF37;">
+              Vinicius O Matos &rarr;
+            </a>
+            <p class="text-gray-600 text-xs mt-1">Soluções de IA &amp; Automação</p>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="text-white font-bold mb-6 text-xs tracking-widest uppercase">LINKS RÁPIDOS</h4>
+          <nav class="flex flex-col gap-3">
+            <a href="#inicio" class="text-gray-500 hover:text-[#D4AF37] transition-colors text-sm">&rarr; Início</a>
+            <a href="#consultoria" class="text-gray-500 hover:text-[#D4AF37] transition-colors text-sm">&rarr; Consultoria Radar 360&deg;</a>
+            <a href="#sobre" class="text-gray-500 hover:text-[#D4AF37] transition-colors text-sm">&rarr; Sobre Emily</a>
+            <a href="#resultados" class="text-gray-500 hover:text-[#D4AF37] transition-colors text-sm">&rarr; Resultados</a>
+            <a href="#contato" class="text-gray-500 hover:text-[#D4AF37] transition-colors text-sm">&rarr; Contato</a>
+          </nav>
+        </div>
+
+        <!-- Contato -->
+        <div>
+          <h4 class="text-white font-bold mb-6 text-xs tracking-widest uppercase">CONTATO</h4>
+          <div class="flex flex-col gap-3 mb-8">
+            <a href="mailto:contato@rainhadamidia.online"
+               class="flex items-center gap-2 text-gray-500 hover:text-[#D4AF37] transition-colors text-sm">
+              &#128231; contato@rainhadamidia.online
+            </a>
+            <a href="https://wa.me/5551981337913" target="_blank" rel="noopener noreferrer"
+               class="flex items-center gap-2 text-gray-500 hover:text-green-400 transition-colors text-sm">
+              &#128241; +55 (51) 98133-7913
+            </a>
+            <div class="flex items-center gap-2 text-gray-500 text-sm">
+              &#128205; Gravataí, Rio Grande do Sul
+            </div>
+          </div>
+
+          <h4 class="text-white font-bold mb-4 text-xs tracking-widest uppercase">REDES SOCIAIS</h4>
+          <div class="flex gap-3">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/rainhadamidia/" target="_blank" rel="noopener noreferrer"
+               class="w-10 h-10 rounded-xl flex items-center justify-center text-gray-500 hover:text-blue-400 transition-all font-bold text-sm"
+               style="background:#12121E; border:1px solid #1E1E30;">in</a>
+            <!-- Instagram -->
+            <a href="https://instagram.com/rainhadamidia.ia" target="_blank" rel="noopener noreferrer"
+               class="w-10 h-10 rounded-xl flex items-center justify-center text-gray-500 hover:text-pink-400 transition-all text-base"
+               style="background:#12121E; border:1px solid #1E1E30;">&#128247;</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-[#1E1E30] pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-gray-600 text-sm">&copy; 2026 Rainha da Mídia &mdash; Emily Susan. Todos os direitos reservados.</p>
+        <div class="flex gap-6">
+          <a href="#" class="text-gray-600 hover:text-gray-400 transition-colors text-xs">Política de Privacidade</a>
+          <a href="#" class="text-gray-600 hover:text-gray-400 transition-colors text-xs">Termos de Uso</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ======================== -->
+  <!-- SCRIPTS                  -->
+  <!-- ======================== -->
+  <script>
+    // ---- Mobile Menu ----
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('open');
+    }
+
+    // ---- Accordion ----
+    function toggleAccordion(btn) {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.accordion-icon');
+      const isOpen = content.classList.contains('open');
+
+      document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+      document.querySelectorAll('.accordion-icon').forEach(el => { el.textContent = '+'; });
+
+      if (!isOpen) {
+        content.classList.add('open');
+        icon.textContent = '\u2212';
+      }
+    }
+
+    // ---- Scroll Reveal ----
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ---- Header scroll ----
+    window.addEventListener('scroll', () => {
+      const h = document.getElementById('header');
+      if (window.scrollY > 60) {
+        h.style.background = 'rgba(10,10,20,0.98)';
+        h.style.boxShadow = '0 4px 30px rgba(0,0,0,0.6)';
+      } else {
+        h.style.background = 'rgba(10,10,20,0.85)';
+        h.style.boxShadow = 'none';
+      }
+    });
+
+    // ---- Smooth scroll ----
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const el = document.querySelector(href);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+
+</body>
+</html>
