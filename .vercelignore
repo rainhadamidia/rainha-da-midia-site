@@ -1,0 +1,10 @@
+# Publica SOMENTE os arquivos do site. Todo o resto da pasta
+# (AIOX, squads, PDFs, scripts, .env, configs de IDE) fica fora do deploy.
+/*
+!/index.html
+!/privacidade.html
+!/termos.html
+!/vercel.json
+!/emily.jpg
+!/emily-executiva.jpg
+!/logo.png
