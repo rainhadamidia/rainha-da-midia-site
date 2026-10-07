@@ -12,7 +12,7 @@
         { "key": "Referrer-Policy",          "value": "strict-origin-when-cross-origin" },
         { "key": "Permissions-Policy",       "value": "camera=(), microphone=(), geolocation=()" },
         { "key": "Strict-Transport-Security","value": "max-age=31536000; includeSubDomains" },
-        { "key": "Access-Control-Allow-Origin",  "value": "https://rainhadamidia.online" },
+        { "key": "Access-Control-Allow-Origin",  "value": "https://www.rainhadamidia.world" },
         { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" },
         { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
       ]
